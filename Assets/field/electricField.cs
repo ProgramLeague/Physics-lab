@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gravityField : field
+public class electricField : field
 {
-    public float a;
+    public float E;
     public Vector3 direction;
 
-    public gravityField(float a, Vector3 direction)
+    public electricField(float E, Vector3 direction)
     {
-        this.a = a;
+        this.E = E;
         this.direction = direction;
     }
 
     public override void update(GameObject obj)
     {
         phyObj po = obj.GetComponent<phyObj>();
-        unityFire.addItemForce(obj, po.getm() * this.a, this.direction);
+        unityFire.addItemForce(obj, po.getq() * this.E, this.direction);
     }
 }

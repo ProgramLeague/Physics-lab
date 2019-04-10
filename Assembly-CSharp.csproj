@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\creatObj.cs" />
+    <Compile Include="Assets\field\electricField.cs" />
     <Compile Include="Assets\field\field.cs" />
     <Compile Include="Assets\field\gravityField.cs" />
     <Compile Include="Assets\init.cs" />
