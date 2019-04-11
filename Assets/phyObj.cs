@@ -21,11 +21,28 @@ public class phyObj : MonoBehaviour {
         rb.mass = mass;
     }
 
+    universalGravIField ugF;
+    electrostaticIField eF;
+    private void Start()
+    {
+        this.ugF = new universalGravIField(this.gameObject);
+        this.eF = new electrostaticIField(this.gameObject);
+        init.allField.Add(this.ugF);
+        init.allField.Add(this.eF);
+    }
+
     private void Update()
     {
+        //计算所有力场作用
         foreach(field f in init.allField)
         {
             f.update(this.gameObject);
         }
+    }
+
+    ~phyObj()
+    {
+        init.allField.Remove(ugF);
+        init.allField.Remove(eF);
     }
 }

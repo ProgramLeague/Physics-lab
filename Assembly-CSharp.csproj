@@ -63,8 +63,11 @@
   <ItemGroup>
     <Compile Include="Assets\creatObj.cs" />
     <Compile Include="Assets\field\electricField.cs" />
+    <Compile Include="Assets\field\electrostaticIField.cs" />
     <Compile Include="Assets\field\field.cs" />
     <Compile Include="Assets\field\gravityField.cs" />
+    <Compile Include="Assets\field\IField.cs" />
+    <Compile Include="Assets\field\universalGravIField.cs" />
     <Compile Include="Assets\init.cs" />
     <Compile Include="Assets\phyObj.cs" />
     <Compile Include="Assets\UnityFire\calu.cs" />
