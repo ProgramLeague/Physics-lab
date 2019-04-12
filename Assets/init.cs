@@ -13,8 +13,12 @@ public class init : MonoBehaviour {
         allField.Add(f);*/
 
         var o1=creatObj.creatObject(new Vector3(0, 0, 0),1,0.00002f);
-        unityFire.addItemVelocity(o1,1,new Vector3(-0.5f, 0.5f, -0.5f));
-        creatObj.creatObject(new Vector3(2, 2, 2), 1, 0.0002f);
+        var o2=creatObj.creatObject(new Vector3(2, 2, 2), 1, 0.0002f);
+
+        Vector3 d1 = unityFire.getItemPos(o1) - unityFire.getItemPos(o2);
+        Vector3 d2 = new Vector3(0, 1, 0);
+        unityFire.addItemVelocity(o1, 1.2f, calu.normalVector(d1,d2));
+
         creatObj.creatObject(new Vector3(3, 3, 3), 99999999999);
         creatObj.creatObject(new Vector3(4, 4, 4), 99999999999);
     }
