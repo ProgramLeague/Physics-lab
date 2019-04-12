@@ -89,7 +89,7 @@ class unityFire : MonoBehaviour
 		rb.velocity += angle * v;
 	}
 
-    public static void getItemVelocity(GameObject item)
+    public static Vector3 getItemVelocity(GameObject item)
     {
         Rigidbody rb = item.GetComponent<Rigidbody>();
         return rb.velocity;
