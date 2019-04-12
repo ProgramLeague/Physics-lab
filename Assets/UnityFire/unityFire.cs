@@ -89,6 +89,12 @@ class unityFire : MonoBehaviour
 		rb.velocity += angle * v;
 	}
 
+    public static void getItemVelocity(GameObject item)
+    {
+        Rigidbody rb = item.GetComponent<Rigidbody>();
+        return rb.velocity;
+    }
+
 	public static GameObject findItem(string itemName)
 	{
 		return GameObject.Find(itemName);
@@ -126,7 +132,7 @@ class unityFire : MonoBehaviour
 
     public static GameObject getRayItem(Vector3 pos)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(pos);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
             return hit.collider.gameObject;
