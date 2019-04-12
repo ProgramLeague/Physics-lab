@@ -19,8 +19,8 @@ public class init : MonoBehaviour {
         Vector3 d2 = new Vector3(0, 1, 0);
         unityFire.addItemVelocity(o1, 1.2f, calu.normalVector(d1,d2));
 
-        creatObj.creatObject(new Vector3(3, 3, 3), 99999999999);
-        creatObj.creatObject(new Vector3(4, 4, 4), 99999999999);
+        creatObj.creatObject(new Vector3(3, 3, 3), 99999999999, 0, 1);
+        creatObj.creatObject(new Vector3(4, 4, 4), 99999999999, 0, 1);
     }
 	
 }
