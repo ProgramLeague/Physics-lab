@@ -21,7 +21,11 @@ public class electrostaticIField : IField
         phyObj po = obj.GetComponent<phyObj>();
         double F = (k * thisPo.getq() * po.getq()) / r2;
 
-        dir.Normalize();
-        unityFire.addItemForce(obj, (float)F, dir);
+        if(F < 0)
+        {
+            F = -F;
+            dir = -dir;
+        }
+        unityFire.addItemForce(obj, (float)F, dir.normalized);
     }
 }

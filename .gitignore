@@ -1,3 +1,14 @@
 .vs/
 Library/
 Temp/
+UnityEditor.StandardEvents.csproj
+Unity.TextMeshPro.csproj
+Unity.TextMeshPro.Editor.csproj
+Unity.PackageManagerUI.Editor.csproj
+Unity.CollabProxy.Editor.csproj
+Unity.Analytics.DataPrivacy.csproj
+ProjectSettings/VFXManager.asset
+Physics-lab.csproj
+Logs/Packages-Update.log
+Assets/field/magneticField.cs.meta
+Assets/field/magneticField.cs
