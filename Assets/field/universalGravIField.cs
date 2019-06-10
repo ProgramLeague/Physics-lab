@@ -6,7 +6,7 @@ public class universalGravIField : IField
 {
     public double G;
 
-    public universalGravIField(GameObject thisObj, double G = 0.0000000000667)
+    public universalGravIField(GameObject thisObj, double G = 6.67e-11)
     {
         this.thisObj = thisObj;
         this.thisPo = thisObj.GetComponent<phyObj>();
